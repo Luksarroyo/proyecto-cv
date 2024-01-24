@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect  } from 'react'
 import {ItemDetail} from './ItemDetail'
-import { useEffect } from 'react'
 import {items} from '../../ItemsMock'
 
 
