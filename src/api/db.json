@@ -116,30 +116,6 @@
       "descripcion": "chemex 3 tazas",
       "categoria": "cafetera",
       "img": "https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851273/tienda%20cafe/cafetera1_jobxap.jpg"
-    },
-    {
-      "id": "357a",
-      "titulo": "Cafe blend",
-      "precio": 123,
-      "stock": 12,
-      "descripcion": "cafe 250gr",
-      "categoria": "cafe"
-    },
-    {
-      "id": "76da",
-      "titulo": "Cafe blend",
-      "precio": 123,
-      "stock": 12,
-      "descripcion": "cafe 250gr",
-      "categoria": "cafe"
-    },
-    {
-      "id": "8e48",
-      "titulo": "Cafe blend",
-      "precio": 123,
-      "stock": 12,
-      "descripcion": "cafe 250gr",
-      "categoria": "cafe"
     }
   ]
 }
