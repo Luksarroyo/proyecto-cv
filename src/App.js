@@ -1,15 +1,27 @@
-import "./App.css";
-import FetchingData from "./components/FetchingData/FetchingData";
-import Navbar from "./components/Navbar/NavbarPresentational";
-import ProductosContainer from "./components/Productos/ProductosContainer";
 
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ProductosContainer from "./components/Productos/ProductosContainer"
+import Navbar from "./components/Navbar/NavbarPresentational";
+import Footer from "./components/Footer/Footer";
+import HomeContainer from "./components/Home/HomeContainer";
+import Home from "./components/Home/Home";
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <ProductosContainer />
-      <FetchingData/>
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route element= {<Navbar/>}>
+            <Route element={<Footer/>}>
+              <Route path="/" element= {<HomeContainer/>}/>
+              <Route path="/productos" element={<ProductosContainer/>}/>
+
+              <Route path="/productos"/>
+
+              <Route path="*" element={<h1>este es el home</h1>}/>
+            </Route>
+          </Route>
+        </Routes>
+    </BrowserRouter>
   );
 }
 

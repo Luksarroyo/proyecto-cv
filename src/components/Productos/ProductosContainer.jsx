@@ -17,7 +17,7 @@ const ProductosContainer = () => {
   }, []);
 
   return (
-    <div>
+    <div className={style.container}>
       <Productos lista={lista} />
     </div>
   );
