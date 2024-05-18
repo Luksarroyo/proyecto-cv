@@ -13,15 +13,17 @@ function App() {
           <Route element= {<Navbar/>}>
             <Route element={<Footer/>}>
               <Route path="/" element= {<HomeContainer/>}/>
-              <Route path="/productos" element={<ProductosContainer/>}/>
+              <Route path="/categoria/:name" element= {<ProductosContainer/>}/>
+              {/* <Route path="/productos" element={<ProductosContainer/>}/> */}
 
               <Route path="/productos"/>
 
-              <Route path="*" element={<h1>este es el home</h1>}/>
+              <Route path="*" element={<h1>Ruta no encontrada</h1>}/>
             </Route>
           </Route>
         </Routes>
     </BrowserRouter>
+    
   );
 }
 

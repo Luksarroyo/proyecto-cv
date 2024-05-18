@@ -5,7 +5,7 @@ export const items = [
         precio: 10000,
         stock: 15,
         descripcion: "cafe 250gr",
-        categoria: "cafe",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849820/tienda%20cafe/cafe6_xsaiin.jpg",
     },
     {
@@ -14,7 +14,7 @@ export const items = [
         precio: 10000,
         stock: 15,
         descripcion: "cafe 250gr",
-        categoria: "cafe",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849804/tienda%20cafe/cafe2_sgcmdj.jpg",
     },
     {
@@ -23,7 +23,7 @@ export const items = [
         precio: 11400,
         stock: 15,
         descripcion: "cafe 250gr",
-        categoria: "cafe",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849808/tienda%20cafe/cafe3_yzkzqw.jpg",
     },
     {
@@ -32,7 +32,7 @@ export const items = [
         precio: 11400,
         stock: 15,
         descripcion: "cafe 250gr",
-        categoria: "cafe",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849812/tienda%20cafe/cafe4_dgl5q3.jpg",
     },
     {
@@ -41,7 +41,7 @@ export const items = [
         precio: 14500,
         stock: 15,
         descripcion: "cafe 250gr",
-        categoria: "cafe",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849816/tienda%20cafe/cafe5_v5hbbk.jpg",
     },
     {
@@ -50,7 +50,7 @@ export const items = [
         precio: 14500,
         stock: 15,
         descripcion: "cafe 250gr",
-        categoria: "cafe",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849802/tienda%20cafe/cafe_1_irckh3.jpg",
     },
     {
@@ -59,7 +59,7 @@ export const items = [
         precio: 12500,
         stock: 15,
         descripcion: "Capsulas x8 unidades",
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850778/tienda%20cafe/accesorio4_jy74qj.jpg",
     },
     {
@@ -68,7 +68,7 @@ export const items = [
         precio: 46500,
         stock: 15,
         descripcion: "Molino manual de aluminio",
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850725/tienda%20cafe/accesorio3_bjk6ms.jpg",
     },
     {
@@ -77,7 +77,7 @@ export const items = [
         precio: 31500,
         stock: 15,
         descripcion: "Taza termica",
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850720/tienda%20cafe/accesorio2_nsqsii.jpg",
     },
     {
@@ -86,7 +86,7 @@ export const items = [
         precio: 14500,
         stock: 15,
         descripcion: "vaso 1,5", 
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850718/tienda%20cafe/accesorio_1_pjvhyl.jpg",
     },
     {
@@ -95,7 +95,7 @@ export const items = [
         precio: 34500,
         stock: 15,
         descripcion: "botella para filtrado",
-        categoria: "cafeteras",
+        categoria:"maquinasdecafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851281/tienda%20cafe/cafetera3_rneqqj.jpg",
     },
     {
@@ -104,7 +104,7 @@ export const items = [
         precio: 21300,
         stock: 15,
         descripcion: "prensa de vidrio 600ml negra",
-        categoria: "cafetera",
+        categoria:"maquinasdecafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851277/tienda%20cafe/cafetera2_dl4pd5.jpg",
     },
     {
@@ -113,7 +113,7 @@ export const items = [
         precio: 92000,
         stock: 15,
         descripcion: "chemex 3 tazas",
-        categoria: "cafetera",
+        categoria:"maquinasdecafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851273/tienda%20cafe/cafetera1_jobxap.jpg",
     }
 ]
