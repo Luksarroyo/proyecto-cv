@@ -13,10 +13,11 @@ const ProductosContainer = () => {
 
   useEffect(() => {
 
+
     const categoriaFiltrada = items.filter (prod=> prod.categoria === categoriaNombre)
 
     const tarea = new Promise((resolve, reject) => {
-     resolve(categoriaNombre ? categoriaFiltrada : items);
+    resolve(categoriaNombre ? categoriaFiltrada : items);
       
     });
 
@@ -24,7 +25,7 @@ const ProductosContainer = () => {
     .then((res) => setLista(res)) 
     .catch((error) => console.log(error));
 
-  },[categoriaNombre])
+  },[categoriaNombre]);
 
   return (
     <div className={style.container}>

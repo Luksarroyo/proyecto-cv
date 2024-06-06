@@ -5,7 +5,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 
 const Home = () => {
   return (
-    <div>
+    <div className={style.container}>
         <div>
       <img
         className={style.img}
@@ -45,13 +45,13 @@ const Home = () => {
           </tr>
         </thead>
         <tbody className={style.tablaBody}>
-          <tr>
+          <tr className = {style.casillero}>
             <h3><HiTruck />Enviamos tu compra</h3>
           </tr>
-          <tr>
+          <tr className = {style.casillero}>
             <h3><FaCreditCard />Paga como quieras</h3>
           </tr>
-          <tr>
+          <tr className = {style.casillero}>
             <h3><MdOutlineSecurity />compra con seguridad</h3>
           </tr>
         </tbody>

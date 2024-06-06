@@ -1,7 +1,7 @@
 import CartWidget from "../CartWidget/CartWidget"
 import style from "./Navbar.module.css"
 import {Link, Outlet} from "react-router-dom"
-import { items } from "../../ItemsMock";
+
 
 const Navbar = () => {
  return <div>
@@ -12,9 +12,9 @@ const Navbar = () => {
                     <Link to="/categoria/cafe" className= {style.list}>NUESTRO CAFE</Link >
                     <Link to="/categoria/accesorios" className= {style.list} >ACCESORIOS</Link >
                     <Link to="/categoria/maquinasdecafe" className= {style.list} >MAQUINAS DE CAFE</Link >
-                    <Link  to="/usuario" className= {style.list}>USUARIO</Link >
+                    <Link  to="/login" className= {style.list}>USUARIO</Link >
                 </ul>
-               <div className={style.ContainerCart} > <CartWidget/></div>
+               <Link to="/cart" className={style.ContainerCart} ><CartWidget/></Link>
         </div>
         <Outlet/>
         
