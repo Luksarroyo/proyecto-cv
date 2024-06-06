@@ -4,17 +4,17 @@ export const items = [
         titulo: "Cafe brasil Bourbon rojo",
         precio: 10000,
         stock: 15,
-        descripcion: "cafe 250gr",
-        categoria: "cafe",
+        descripcion: "Cafe 250gr.Bourbon Rojo, una de las variedades más apreciadas de Coffea Arabica, famosa por su perfil de sabor dulce y complejo.",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849820/tienda%20cafe/cafe6_xsaiin.jpg",
     },
     {
         id:2,
-        titulo: "Cafe blend",
+        titulo: "Cafe de especialidad blend",
         precio: 10000,
         stock: 15,
-        descripcion: "cafe 250gr",
-        categoria: "cafe",
+        descripcion: "Cafe 250gr.Este blend se compone de diferentes variedades de Coffea Arabica, cada una aportando sus características distintivas. Las combinaciones pueden incluir Bourbon, Caturra, Typica, y otras variedades selectas.",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849804/tienda%20cafe/cafe2_sgcmdj.jpg",
     },
     {
@@ -22,8 +22,8 @@ export const items = [
         titulo: "Café Colombia Los Ocobos",
         precio: 11400,
         stock: 15,
-        descripcion: "cafe 250gr",
-        categoria: "cafe",
+        descripcion: "Cafe 250gr.Este café es de la variedad Coffea Arabica, específicamente cultivado a partir de las variedades típicas de la región, como Caturra, Castillo y Typica, que son reconocidas por su excelente calidad en taza y resistencia a enfermedades.",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849808/tienda%20cafe/cafe3_yzkzqw.jpg",
     },
     {
@@ -31,8 +31,8 @@ export const items = [
         titulo: "Café Colombia Altos de Maria",
         precio: 11400,
         stock: 15,
-        descripcion: "cafe 250gr",
-        categoria: "cafe",
+        descripcion: "Cafe 250gr.Este café es de la variedad Coffea Arabica, específicamente de las variedades Caturra y Colombia, que son reconocidas por su calidad superior y resistencia a enfermedades.",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849812/tienda%20cafe/cafe4_dgl5q3.jpg",
     },
     {
@@ -40,8 +40,8 @@ export const items = [
         titulo: "Café Colombia Bourbon Rosado",
         precio: 14500,
         stock: 15,
-        descripcion: "cafe 250gr",
-        categoria: "cafe",
+        descripcion: "Cafe 250gr.Este café es de la variedad Bourbon Rosado, una mutación del Bourbon original que se distingue por sus características únicas y su perfil de sabor excepcional. Es una variedad de Coffea Arabica conocida por su dulzura y complejidad.",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849816/tienda%20cafe/cafe5_v5hbbk.jpg",
     },
     {
@@ -49,8 +49,8 @@ export const items = [
         titulo: "Café Brasil Microlote Anaeróbico Natural",
         precio: 14500,
         stock: 15,
-        descripcion: "cafe 250gr",
-        categoria: "cafe",
+        descripcion: "Cafe 250gr.Este café es de la variedad Coffea Arabica, seleccionada específicamente para su procesamiento único y las características excepcionales que aporta a la taza.",
+        categoria:"cafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703849802/tienda%20cafe/cafe_1_irckh3.jpg",
     },
     {
@@ -59,7 +59,7 @@ export const items = [
         precio: 12500,
         stock: 15,
         descripcion: "Capsulas x8 unidades",
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850778/tienda%20cafe/accesorio4_jy74qj.jpg",
     },
     {
@@ -68,7 +68,7 @@ export const items = [
         precio: 46500,
         stock: 15,
         descripcion: "Molino manual de aluminio",
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850725/tienda%20cafe/accesorio3_bjk6ms.jpg",
     },
     {
@@ -77,7 +77,7 @@ export const items = [
         precio: 31500,
         stock: 15,
         descripcion: "Taza termica",
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850720/tienda%20cafe/accesorio2_nsqsii.jpg",
     },
     {
@@ -86,7 +86,7 @@ export const items = [
         precio: 14500,
         stock: 15,
         descripcion: "vaso 1,5", 
-        categoria: "accesorios",
+        categoria:"accesorios",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703850718/tienda%20cafe/accesorio_1_pjvhyl.jpg",
     },
     {
@@ -95,7 +95,7 @@ export const items = [
         precio: 34500,
         stock: 15,
         descripcion: "botella para filtrado",
-        categoria: "cafeteras",
+        categoria:"maquinasdecafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851281/tienda%20cafe/cafetera3_rneqqj.jpg",
     },
     {
@@ -104,7 +104,7 @@ export const items = [
         precio: 21300,
         stock: 15,
         descripcion: "prensa de vidrio 600ml negra",
-        categoria: "cafetera",
+        categoria:"maquinasdecafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851277/tienda%20cafe/cafetera2_dl4pd5.jpg",
     },
     {
@@ -113,7 +113,7 @@ export const items = [
         precio: 92000,
         stock: 15,
         descripcion: "chemex 3 tazas",
-        categoria: "cafetera",
+        categoria:"maquinasdecafe",
         img:"https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703851273/tienda%20cafe/cafetera1_jobxap.jpg",
     }
 ]

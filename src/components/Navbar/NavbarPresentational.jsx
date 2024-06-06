@@ -1,20 +1,23 @@
 import CartWidget from "../CartWidget/CartWidget"
 import style from "./Navbar.module.css"
-
-
+import {Link, Outlet} from "react-router-dom"
 
 
 const Navbar = () => {
- return <div className={style.containerNavbar}>
-                <img  className={style.logo}src="https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703845527/da871c525be54819b7ecf9176a53bf0a_xhox2b.png" alt="logo empresa" />
+ return <div>
+        <div className={style.containerNavbar}>
+                <img  className={style.logo}src="https://res.cloudinary.com/dhk4b7fdq/image/upload/v1703845527/tienda%20cafe/da871c525be54819b7ecf9176a53bf0a_xhox2b.png" alt="logo empresa" />
                 <ul className={style.containerList}>
-                    <li className= {style.list}>INICIO</li>
-                    <li className= {style.list}>NUESTRO CAFE</li>
-                    <li className= {style.list}>ACCESORIOS</li>
-                    <li className= {style.list}>MAQUINAS DE CAFE</li>
-                    <li className= {style.list}>CONTACTO</li>
+                    <Link to="/"className= {style.list}>INICIO</Link >
+                    <Link to="/categoria/cafe" className= {style.list}>NUESTRO CAFE</Link >
+                    <Link to="/categoria/accesorios" className= {style.list} >ACCESORIOS</Link >
+                    <Link to="/categoria/maquinasdecafe" className= {style.list} >MAQUINAS DE CAFE</Link >
+                    <Link  to="/login" className= {style.list}>USUARIO</Link >
                 </ul>
-               <div className={style.ContainerCart} > <CartWidget/></div>
+               <Link to="/cart" className={style.ContainerCart} ><CartWidget/></Link>
         </div>
+        <Outlet/>
+        
+    </div>
 }
 export default Navbar

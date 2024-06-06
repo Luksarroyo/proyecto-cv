@@ -1,0 +1,30 @@
+
+.container{
+    width: 100%;
+    height: 480px;
+    
+}
+.img{
+    float: left;
+    width: 500px;
+    height: 300px;
+}
+.parrafo{
+ display: flex;
+ margin-top: 0px;
+ 
+}
+.tabla{  
+    margin: 70px 350px;
+}
+.tablaBody{
+    display: flex;
+    justify-content:space-between;
+    padding: 0px;
+}
+
+.casillero{
+    display: flex;
+    text-align: center;
+    padding: 5px;
+}

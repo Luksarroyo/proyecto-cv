@@ -1,15 +1,24 @@
 .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px 70px; /* Centra el contenedor */
+
+}
+.cardContainer{
     background-color:#C8A502;
     width: 200px;
     height: 400px;
     color: #f4f5f7;
     border: 5px solid black;
-    margin: 10px;
-}
 
+}
 .cardImg{
+    margin-top: 10px;
+    margin-left: 50px;
     width: 100px;
     height: 200px;
+    
 }
 .button{
     border-radius: 50px;

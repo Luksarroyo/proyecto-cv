@@ -1,15 +1,26 @@
 import { useState, useEffect } from "react";
 import Productos from "./Productos";
+<<<<<<< HEAD
 import axios from "axios";
 import style from "./Productos.module.css";
+=======
+import { items } from "../../ItemsMock";
+import style from "./Productos.module.css"
+import { useParams } from "react-router-dom";
+
+>>>>>>> Eventos
 
 const ProductosContainer = () => {
+  const {categoriaNombre} = useParams ()
+  console.log(categoriaNombre);
+
   const [lista, setLista] = useState([]);
   const [isDelete, setIsDelete] = useState(false);
   const [modificado, setModificado] = useState(false);
   const [crear, setCrear] = useState(false);
 
   useEffect(() => {
+<<<<<<< HEAD
     setIsDelete(false);
     setModificado(false);
     setCrear(false);
@@ -57,8 +68,27 @@ const ProductosContainer = () => {
       >
         crear producto
       </button>
-    </div>
-  );
-};
+=======
 
+
+    const categoriaFiltrada = items.filter (prod=> prod.categoria === categoriaNombre)
+
+    const tarea = new Promise((resolve, reject) => {
+    resolve(categoriaNombre ? categoriaFiltrada : items);
+      
+    });
+
+    tarea
+    .then((res) => setLista(res)) 
+    .catch((error) => console.log(error));
+
+  },[categoriaNombre]);
+
+  return (
+    <div className={style.container}>
+      <Productos lista={lista} />
+>>>>>>> Eventos
+    </div>
+   );
+};
 export default ProductosContainer;
