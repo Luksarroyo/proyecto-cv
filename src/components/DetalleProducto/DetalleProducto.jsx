@@ -1,5 +1,6 @@
 import React from 'react'
 import style from "./Detalle.module.css"
+import CounterCountainer from '../Counter/CounterCountainer';
 
 
 const DetalleProducto = ({items}) => {
@@ -13,6 +14,7 @@ const DetalleProducto = ({items}) => {
             <h1 className={style.titulo}>{elemento.titulo}</h1>
             <h2 className={style.descripcion}>{elemento.descripcion}</h2>
             <h3 className={style.precio}>${elemento.precio}</h3>
+            <CounterCountainer/>
             <button className={style.buttom}>COMPRAR</button>
             </div>
           </div>

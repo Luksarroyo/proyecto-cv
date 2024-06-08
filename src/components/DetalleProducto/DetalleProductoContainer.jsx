@@ -10,7 +10,7 @@ const DetalleProductoContainer = () => {
   console.log (id)
 
     useEffect (() => {
-      let idEncontrado = items.find((prod) => producto.id === +id);
+      let idEncontrado = items.find((producto) => producto.id === +id);
       setProducto (idEncontrado);
     }, [id]);
   

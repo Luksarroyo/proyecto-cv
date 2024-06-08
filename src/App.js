@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import "./App.css";
 import Navbar from "./components/Navbar/NavbarPresentational";
 import ProductosContainer from "./components/Productos/ProductosContainer";
 import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer";
-=======
->>>>>>> Eventos
 
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -18,13 +15,6 @@ import Usuario from "./components/Usuario/Usuario";
 import DetalleProductoContainer from "./components/DetalleProducto/DetalleProductoContainer";
 function App() {
   return (
-<<<<<<< HEAD
-    <div className="App">
-      <Navbar />
-      <ProductosContainer />
-      <ItemDetailContainer/>
-    </div>
-=======
     <BrowserRouter>
         <Routes>
           <Route element= {<Navbar/>}>
@@ -41,7 +31,6 @@ function App() {
         </Routes>
     </BrowserRouter>
     
->>>>>>> Eventos
   );
 }
 
