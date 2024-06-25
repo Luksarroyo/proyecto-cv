@@ -1,4 +1,4 @@
-import Navbar from './NavbarPresentational'
+import NavbarPresentational from './NavbarPresentational'
 
 const NavbarContainer = () => {
 // logica de js
