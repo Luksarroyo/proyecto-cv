@@ -3,7 +3,7 @@ import Counter from './Counter';
 // 5to recibo la funcion on add de detalleProducto
 const CounterContainer = ({stock, onAdd}) => {
 
-const [counter, setCounter] = useState (0);
+const [counter, setCounter] = useState (1);
 
 const sumar = () => {
     if (counter < stock){
@@ -15,7 +15,7 @@ const sumar = () => {
 };
 
 const restar = () => {
-    if (counter > 0) {
+    if (counter > 1) {
         setCounter (counter -1);
     }else{
         alert ("Error")

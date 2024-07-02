@@ -1,12 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar/NavbarPresentational";
 import ProductosContainer from "./components/Productos/ProductosContainer";
-import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer";
-
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ProductosContainer from "./components/Productos/ProductosContainer"
-import Navbar from "./components/Navbar/NavbarPresentational";
 import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import Form from "./components/Form/Form";

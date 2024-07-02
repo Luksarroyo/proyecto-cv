@@ -1,24 +1,27 @@
-import {FaOpencart} from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-
-import { useContext } from 'react'
-import { CartContext } from '../../Context/CartContext'
+import { FaOpencart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import style from "./CartWidget.module.css";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 const CartWidget = () => {
+  const { cart, totalCantidad } = useContext(CartContext);
 
-
-  const {totalCantidad} = useContext (CartContext)
-
-  let total = totalCantidad()
+  let total = totalCantidad();
   return (
     <Link to="/cart">
-    <div><FaOpencart size={30} /></div>
-    <div>
-      <span>{total}</span>
-    </div>
-    </Link>   
-  )
-}
+      <div>
+        <div>
+          <FaOpencart size={35} />
+        </div>
+        {cart.length > 0 && (
+          <div>
+            <span className={style.counter}>{total}</span>
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+};
 
-
-export default CartWidget
+export default CartWidget;

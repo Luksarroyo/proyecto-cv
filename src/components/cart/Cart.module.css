@@ -12,7 +12,7 @@
 }
 .precio{
     display: flex;
-    align-items: end;
+    align-items:flex-end;
 }
 .img {
     width: 100px;
@@ -20,15 +20,22 @@
 }
 .cantidad{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     margin-right: 50px;
 }
 .buttom{
+    display: flex;
+    justify-content: center;
     width: 150px;
     height: 30px;
 }
 .totalCompra{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     margin-right: 50px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+
 }

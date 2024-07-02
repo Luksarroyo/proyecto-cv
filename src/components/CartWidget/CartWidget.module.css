@@ -1,3 +1,6 @@
-.ContainerCart{
-    float: right;
+
+.counter{
+    position: absolute;
+    top: 57px;
+    right: 25px;   
 }

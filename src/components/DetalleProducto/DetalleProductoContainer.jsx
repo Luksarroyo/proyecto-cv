@@ -3,17 +3,11 @@ import DetalleProducto from "./DetalleProducto";
 import { items } from "../../ItemsMock";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
+import Swal from 'sweetalert2'
 
 const DetalleProductoContainer = () => {
   const [producto, setProducto] = useState({});
 
-<<<<<<< HEAD
-    useEffect (() => {
-      let idEncontrado = items.find((producto) => producto.id === +id);
-      setProducto (idEncontrado);
-    }, [id]);
-  
-=======
   const { agregarAlCarrito } = useContext(CartContext);
 
   const { id } = useParams();
@@ -33,10 +27,17 @@ const DetalleProductoContainer = () => {
     };
     
   agregarAlCarrito(data);
+  // boton de alerta, de sweetalert2
+  Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "El producto fue agregado al carrito",
+    showConfirmButton: false,
+    timer: 1500
+  });
 
   };
   // 2do paso: paso la funcion onAdd a detalleProducto
->>>>>>> context
   return (
     <div>
       <DetalleProducto producto={producto} onAdd={onAdd} />
