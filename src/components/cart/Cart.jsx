@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Cart.module.css";
 
 
-const Cart = ({ cart, clearCartAlert, deleteProductoById, total }) => {
+const Cart = ({ cart, clearCartAlert, deleteProductoById, total , navigate}) => {
   return (
     <div >
       <h1 className= {style.titulo}>Lista de Compras</h1>
@@ -26,7 +26,7 @@ const Cart = ({ cart, clearCartAlert, deleteProductoById, total }) => {
       {/* tecnica de rendering condicionado con && */}
       {cart.length > 0 && (
         <div>
-          <button className={style.buttom} >Terminar Compra</button>
+          <button className={style.buttom} onClick={()=> navigate("/checkout")} >Terminar Compra</button>
           <button className={style.buttom} onClick={clearCartAlert}>Limpiar carrito</button>
           
         </div> 

@@ -10,6 +10,7 @@ import Usuario from "./components/Usuario/Usuario";
 import DetalleProductoContainer from "./components/DetalleProducto/DetalleProductoContainer";
 // import NavbarContainer from "./components/Navbar/NavbarContainer";
 import CartContextProvider from "./Context/CartContext";
+import FormCheckOutContainer from "./components/FormCheckOut/FormCheckOutContainer";
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
               <Route path="/categoria/:categoriaNombre" element= {<ProductosContainer/>}/>
               <Route path="/detalleProducto/:id" element= {<DetalleProductoContainer/>}/>
               <Route path="/cart" element= {<CartContainer/>}/>
+              <Route path="/checkout" element= {<FormCheckOutContainer/>}/>
               <Route path="/login" element= {<Form/>}/>
               {/* <Route path="/cart" element= {<NavbarContainer/>}/> */}
               <Route path="/login/crearUsuario" element= {<Usuario/>}/>
