@@ -59,6 +59,20 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors }) => {
               onChange={handleChange}
               error={errors.password ? true : false}
               helperText={errors.password}
+              type="password"
+            />
+          </Grid>
+          <Grid item>
+            <TextField
+              id="filled-basic"
+              label="Confirm Password"
+              variant="filled"
+              name="confirmPassword"
+              color="warning"
+              onChange={handleChange}
+              error={errors.confirmPassword ? true : false}
+              helperText={errors.confirmPassword}
+              type="password"
             />
           </Grid>
           <Grid>

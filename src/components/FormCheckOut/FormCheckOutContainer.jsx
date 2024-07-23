@@ -19,16 +19,29 @@ const FormCheckOutContainer = () => {
 
     validationSchema: Yup.object().shape({
       nombre: Yup.string().required("Este campo es Obligatorio"),
-      email: Yup.string().required("Este campo es Obligatorio").email("Debe ingresar un email valido"),
-      telefono:Yup.number().required("Este campo es Obligatorio"),
-      password: Yup.string().required("Este campo es Obligatorio")
+      email: Yup.string()
+        .required("Este campo es Obligatorio")
+        .email("Debe ingresar un email valido"),
+      telefono: Yup.number().required("Este campo es Obligatorio"),
+      password: Yup.string()
+        .required("Este campo es Obligatorio")
+        .matches(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+        ),
+      confirmPassword: Yup.string()
+        .required("Este campo es Obligatorio")
+        .oneOf([Yup.ref("password")], "la contraseña no coincide"),
     }),
-    validateOnChange: false // de esta forma evito que se valide cada vez que escribo y me tire error todo el tiempo
+    validateOnChange: false, // de esta forma evito que se valide cada vez que escribo y me tire error todo el tiempo
   });
 
   return (
     <div>
-      <FormCheckOut handleChange={handleChange} handleSubmit={handleSubmit} errors={errors} />
+      <FormCheckOut
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        errors={errors}
+      />
     </div>
   );
 };
