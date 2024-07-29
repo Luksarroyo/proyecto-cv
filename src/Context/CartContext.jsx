@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-
 export const CartContext = createContext();
 // aca lo que hago es agregar productos al carrito, pero por cada agregada que hago se suma todo el producto
 // y lo correcto es que si ya tengo un prod solo se agregue la cantidad
@@ -41,23 +40,22 @@ const CartContextProvider = ({ children }) => {
     }
   };
 
-  const totalPrecio= ()=>{
-    let total= cart.reduce ((acc, elemento)=>{
-      return acc + (elemento.precio * elemento.quantity)
-    },0);
+  const totalPrecio = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.precio * elemento.quantity;
+    }, 0);
     return total;
   };
-  const totalCantidad= ()=>{
-    let total= cart.reduce ((acc, elemento)=>{
-      return acc + elemento.quantity
-    },0);
+  const totalCantidad = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.quantity;
+    }, 0);
     return total;
   };
 
   const clearCart = () => {
     // con esta const limpio todo todo el carrito
     setCart([]);
-    
   };
 
   // a dif de clear cart aca solo elimino un producto de los gregados y no todos,uso metodo filter
@@ -78,7 +76,14 @@ const CartContextProvider = ({ children }) => {
     return existe;
   };
 
-  let data = { cart, agregarAlCarrito, clearCart, deleteProductoById, totalPrecio, totalCantidad };
+  let data = {
+    cart,
+    agregarAlCarrito,
+    clearCart,
+    deleteProductoById,
+    totalPrecio,
+    totalCantidad,
+  };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 

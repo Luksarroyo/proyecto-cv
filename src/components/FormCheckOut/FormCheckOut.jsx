@@ -49,32 +49,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors }) => {
               helperText={errors.telefono}
             />
           </Grid>
-          <Grid item>
-            <TextField
-              id="filled-basic"
-              label="Password"
-              variant="filled"
-              name="password"
-              color="warning"
-              onChange={handleChange}
-              error={errors.password ? true : false}
-              helperText={errors.password}
-              type="password"
-            />
-          </Grid>
-          <Grid item>
-            <TextField
-              id="filled-basic"
-              label="Confirm Password"
-              variant="filled"
-              name="confirmPassword"
-              color="warning"
-              onChange={handleChange}
-              error={errors.confirmPassword ? true : false}
-              helperText={errors.confirmPassword}
-              type="password"
-            />
-          </Grid>
+
           <Grid>
             <Button type="submit" variant="outlined" color="warning">
               Enviar
