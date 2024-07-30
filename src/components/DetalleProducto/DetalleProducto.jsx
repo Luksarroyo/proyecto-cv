@@ -13,7 +13,13 @@ const DetalleProducto = ({ producto, onAdd }) => {
           <h2>{producto.descripcion}</h2>
           <h3>${producto.precio}</h3>
           {/* 4to paso: le paso onAdd  a counter container*/}
-          <CounterContainer stock={producto.stock} onAdd={onAdd} />
+          {producto.stock > 0 ? (
+            <div>
+              <CounterContainer stock={producto.stock} onAdd={onAdd} />
+            </div>
+          ) : (
+            <h2>No hay stock</h2>
+          )}
         </div>
       </div>
     </div>

@@ -6,11 +6,11 @@ import * as Yup from "yup";
 // importo todo (*) con el nombre (as) Yup desde "yup"
 import { CartContext } from "../../Context/CartContext";
 import { db } from "../../firebaseConfig";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 
 const FormCheckOutContainer = () => {
-  const { cart, totalPrecio } = useContext(CartContext);
+  const { cart, totalPrecio, clearCart } = useContext(CartContext);
   const [orderId, setOrderId] = useState(null);
 
   useEffect(() => {
@@ -33,6 +33,13 @@ const FormCheckOutContainer = () => {
     };
     const ordenCollection = collection(db, "ordenes");
     addDoc(ordenCollection, ordenCompra).then((res) => setOrderId(res.id));
+
+    cart.map((items) =>
+      updateDoc(doc(db, "items", items.id), {
+        stock: items.stock - items.quantity,
+      })
+    );
+    clearCart();
   };
   const { handleChange, handleSubmit, errors } = useFormik({
     initialValues: {
