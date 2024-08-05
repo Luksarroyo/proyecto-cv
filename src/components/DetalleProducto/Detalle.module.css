@@ -1,17 +1,40 @@
-.container{
-    display: flex;
+.container {
+  display: flex;
 }
-.cardContainer{
+.cardContainer {
+  margin: 50px;
+  padding: 20px;
+  height: 300px;
+  background-color: #c8a502;
+  display: flex;
+}
+.imagen {
+  width: 200px;
+}
+.info {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    display: block;
+  }
+  .cardContainer {
     margin: 50px;
     padding: 20px;
-    height: 300px;
-    background-color:#C8A502;
+    height: auto;
+    background-color: #c8a502;
     display: flex;
-}
-.imagen{
-    width: 200px;
-
-}
-.info{
+    display: block;
     text-align: center;
+  }
+  .imagen {
+    width: 100px;
+    height: 150px;
+  }
+  .info {
+    text-align: center;
+    font-size: medium;
+  }
 }

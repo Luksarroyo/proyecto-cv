@@ -1,41 +1,53 @@
-.container{
-    margin: 10px;
-    padding-bottom: 10px;
-    border: 10px;
-    border-style:inset;
-    border-color: #C8A502;
+.container {
+  margin: 10px;
+  padding-bottom: 10px;
+  border: 10px;
+  border-style: inset;
+  border-color: #c8a502;
 }
-.descripcion{
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 50px 0 50px;
+.descripcion {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 50px 0 50px;
 }
-.precio{
-    display: flex;
-    align-items:flex-end;
+.precio {
+  display: flex;
+  align-items: flex-end;
 }
 .img {
-    width: 100px;
-    height: 150px;
+  width: 100px;
+  height: 150px;
 }
-.cantidad{
-    display: flex;
-    justify-content:flex-end;
-    margin-right: 50px;
+.cantidad {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
 }
-.buttom{
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    height: 30px;
+.buttom {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 30px;
 }
-.totalCompra{
-    display: flex;
-    justify-content:flex-end;
-    margin-right: 50px;
+.totalCompra {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
 }
-.titulo{
+.titulo {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .container {
     display: flex;
-    justify-content: center;
-
+    display: block;
+  }
+  .descripcion {
+    display: flex;
+    display: block;
+    margin: 0;
+  }
+  .cantidad {
+  }
 }

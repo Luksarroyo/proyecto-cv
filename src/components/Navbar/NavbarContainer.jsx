@@ -1,14 +1,11 @@
-import NavbarPresentational from './NavbarPresentational'
+import NavbarPresentational from "./NavbarPresentational";
 
 const NavbarContainer = () => {
-// logica de js
-
   return (
     <div>
-      <NavbarPresentational/>
-
+      <NavbarPresentational />
     </div>
-  )
-}
+  );
+};
 
-export default NavbarContainer
+export default NavbarContainer;

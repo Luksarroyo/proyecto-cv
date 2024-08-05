@@ -1,26 +1,98 @@
 .containerNavbar {
-    background-color:#C8A502;
+  background-color: #c8a502;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+.logo {
+  height: 100px;
+  width: 100px;
+}
+.menuButton {
+  display: none;
+  cursor: pointer;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.burger.open {
+  transform: rotate(45deg);
+}
+
+.burger.open::before {
+  transform: rotate(-90deg) translateX(-5px);
+}
+
+.burger.open::after {
+  opacity: 0;
+}
+.containerList {
+  display: flex;
+  flex-direction: row; /* En dispositivos grandes, se muestran en línea */
+  list-style: none; /* Quitar los bullets */
+  margin: 0; /* Quitar márgenes por defecto */
+  padding: 0; /* Quitar padding por defecto */
+  margin-top: 50px;
+}
+.list {
+  margin: 0 15px;
+  color: #f4f5f7;
+  text-decoration: none;
+  display: block;
+}
+.ContainerCart {
+  margin-top: 50px;
+  margin-right: 10px;
+  color: #f4f5f7;
+}
+
+@media (max-width: 768px) {
+  .containerNavbar {
     display: flex;
     justify-content: space-between;
-}
-.logo{
-    height: 100px;
-    width: 100px;
-    margin-left: 10px;
-}
-.list{
-    display:flex;
-    display: inline;
-    color: #f4f5f7;
-    text-decoration: none;
-    padding: 10px;
-   
-}
-.ContainerCart{
-    margin-top: 50px;
-    margin-right: 10px;
-    color: #f4f5f7;
-}
-.containerList{
-    margin-top: 50px;
+    width: auto;
+    height: auto;
+  }
+  .menuListContainer {
+    display: flex;
+    display: block;
+  }
+  .menuButton {
+    margin-left: 60px;
+    display: block;
+  }
+
+  .containerList {
+    position: initial;
+    top: 100%;
+    right: 0;
+    background-color: #f4f5f7;
+    flex-direction: column; /* Mostrar en columna */
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .containerList.show {
+    max-height: 300px; /* Ajusta según el número de elementos del menú */
+  }
+
+  .list {
+    margin: 10px 0;
+    text-align: center;
+    color: #c8a502;
+  }
 }

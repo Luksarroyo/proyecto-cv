@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 480px;
+  height: auto;
 }
 .img {
   float: left;
@@ -25,15 +25,26 @@
   text-align: center;
   padding: 5px;
 }
-
 @media (max-width: 768px) {
   .container {
-    width: 200px;
-    height: 150px;
+    display: flex;
+    display: block;
+    text-align: center;
+    width: auto;
+    height: auto;
   }
   .img {
     float: none;
-    width: auto;
-    height: auto;
+    width: 200px;
+    height: 150px;
+  }
+  .tabla {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+  .casillero {
+    font-size: x-small;
+    padding: 3px;
   }
 }
