@@ -96,3 +96,7 @@
     color: #c8a502;
   }
 }
+
+.activo {
+  color: red;
+}

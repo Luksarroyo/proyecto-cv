@@ -51,10 +51,24 @@
   }
 }
 
-@media (max-width: 1050px) {
-  .tabla {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-  }
+.cuadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* background-color: blueviolet; */
+}
+
+.cuadritos {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cuadritoInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

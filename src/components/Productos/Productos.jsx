@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 const Productos = ({ lista }) => {
   return lista.map((elemento) => {
     return (
-      <div key={elemento.id} className={style.container}>
+      <div key={elemento.id}>
         <div className={style.cardContainer}>
-          <img className={style.cardImg} src={elemento.img} alt="" />
+          <div>
+            <img className={style.cardImg} src={elemento.img} alt="" />
+          </div>
           <h3>{elemento.titulo}</h3>
           <h2>${elemento.precio}</h2>
           <Link to={`/detalleProducto/${elemento.id}`}>
