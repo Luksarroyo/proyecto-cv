@@ -12,12 +12,14 @@
   margin-top: 0px;
 }
 .tabla {
-  margin: 70px 350px;
+  display: flex;
+  justify-content: center;
+  margin: 100px 50px 0px 50px;
 }
 .tablaBody {
   display: flex;
   justify-content: space-between;
-  padding: 0px;
+  padding: 5px;
 }
 
 .casillero {
