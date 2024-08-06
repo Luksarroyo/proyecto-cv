@@ -2,8 +2,12 @@ import CartWidget from "../CartWidget/CartWidget";
 import style from "./Navbar.module.css";
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { MENU_ITEMS } from "../../lib/constants";
+import { getLinkClasses } from "../../lib/utils";
 
 const Navbar = () => {
+  let location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -27,10 +31,28 @@ const Navbar = () => {
           <ul
             className={`${style.containerList} ${menuOpen ? style.show : ""}`}
           >
-            <Link to="/" className={style.list}>
+            {MENU_ITEMS.map((item) => (
+              <Link
+                to={item.path}
+                className={getLinkClasses({
+                  // item: item,
+                  item,
+                  classes: style.activo,
+                  currentPath: location.pathname,
+                })}
+              >
+                {item.name}
+              </Link>
+            ))}
+            {/* <Link to="/" className={style.list}>
               INICIO
             </Link>
-            <Link to="/categoria/cafe" className={style.list}>
+            <Link
+              to="/categoria/cafe"
+              className={`${style.list} ${
+                location.pathname === "/categoria/cafe" ? style.activo : ""
+              }`}
+            >
               NUESTRO CAFE
             </Link>
             <Link to="/categoria/accesorios" className={style.list}>
@@ -41,7 +63,7 @@ const Navbar = () => {
             </Link>
             <Link to="/login" className={style.list}>
               USUARIO
-            </Link>
+            </Link> */}
           </ul>
         </div>
         <Link to="/cart" className={style.ContainerCart}>
