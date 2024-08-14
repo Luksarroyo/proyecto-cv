@@ -1,10 +1,8 @@
-import React from 'react'
-import Usuario from './Usuario'
+import React from "react";
+import Usuario from "./Usuario";
 
 const UsuarioContainer = () => {
-  return (
-    <Usuario/>
-  )
-}
+  return <Usuario />;
+};
 
-export default UsuarioContainer
+export default UsuarioContainer;

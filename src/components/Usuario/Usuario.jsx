@@ -6,18 +6,16 @@ const Usuario = () => {
   const [user, setUser] = useState({
     crearUsuario: "",
     contraseña: "",
-    email:"",
-
+    email: "",
   });
 
-  
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const envioFormulario = (evento) => {
-    evento.preventDefeult()
+    evento.preventDefeult();
 
-    console.log(user)
+    console.log(user);
   };
   return (
     <div>
@@ -25,7 +23,7 @@ const Usuario = () => {
       <form className={style.formulario} onSubmit={envioFormulario}>
         <input
           type="text"
-          placeholder="Crear usuario"
+          placeholder="Ingrese su  usuario"
           name="crearUsuario"
           value={user.crearUsuario}
           onChange={handleChange}
@@ -33,7 +31,7 @@ const Usuario = () => {
 
         <input
           type="password"
-          placeholder="crear contraseña"
+          placeholder="Ingrese su  contraseña"
           name="contraseña"
           value={user.contraseña}
           onChange={handleChange}

@@ -6,52 +6,50 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { GiCoffeeBeans } from "react-icons/gi";
-import style from "./Footer.module.css"
+import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
+    <>
       <Outlet />
       <div className={style.containerFooter}>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Contacto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <FaPhoneSquareAlt /> 351-1111222333
-            </tr>
-            <tr>
-              <MdEmail /> Doctacoffe@gmail.com
-            </tr>
-            <tr>
-              <FaLocationDot /> Cordoba, Argentina
-            </tr>
-          </tbody>
-        </table>
-        <h2><GiCoffeeBeans />En una ciudad disfrutas todo el mundo<GiCoffeeBeans /></h2>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Redes Sociales</th>
-            </tr>
-          </thead>
-          <tbody className={style.containerRedes}>
-            <tr>
+        <div>
+          <div>
+            <h3>Contacto</h3>
+          </div>
+          <div className={style.infoContacto}>
+            <FaPhoneSquareAlt /> 351-1111222333
+          </div>
+          <div className={style.infoContacto}>
+            <MdEmail /> Doctacoffe@gmail.com
+          </div>
+          <div className={style.infoContacto}>
+            <FaLocationDot /> Cordoba, Argentina
+          </div>
+        </div>
+        <h2 className={style.eslogan}>
+          <GiCoffeeBeans />
+          En una ciudad disfrutas todo el mundo
+          <GiCoffeeBeans />
+        </h2>
+        <div>
+          <div>
+            <h3>Redes Sociales</h3>
+          </div>
+          <div className={style.containerRedes}>
+            <div>
               <AiFillInstagram />
-            </tr>
-            <tr>
+            </div>
+            <div>
               <FaFacebookSquare />
-            </tr>
-            <tr>
+            </div>
+            <div>
               <FaTiktok />
-            </tr>
-          </tbody>
-        </table>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -6,21 +6,21 @@
 }
 .cardContainer {
   background-color: #c8a502;
-  /* width: 200px; */
-  height: 400px;
+  height: 350px;
   color: #f4f5f7;
   border: 5px solid black;
+  text-align: center;
 }
 .cardImg {
-  margin-top: 10px;
-  margin-left: 50px;
-  width: 100px;
+  width: 150px;
   height: 200px;
 }
 .button {
-  border-radius: 50px;
+  width: 50%;
+  border-radius: 10px;
   background-color: black;
   color: #f4f5f7;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .container {

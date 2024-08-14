@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import style from "./Form.module.css";
-import {Link} from "react-router-dom"
+import style from "./Login.module.css";
+import { Link } from "react-router-dom";
 
-const Form = () => {
+const Login = () => {
   // aca va la logica que la aplico en el container
   // para evitar tener 12 useState creo uno generico para ser usado en todos lados
   // useState no va a recibir un string en este caso, sino que un objeto y dentro del objeto voy a manejar un string
   const [userData, setUserData] = useState({
     usuario: "",
-    contraseña: ""
+    contraseña: "",
   });
   console.log(userData);
   const handleChange = (e) => {
@@ -21,8 +21,6 @@ const Form = () => {
   };
   const envioFormulario = (evento) => {
     evento.preventDefeult();
-
-    
   };
   return (
     <div>
@@ -48,12 +46,12 @@ const Form = () => {
         />
 
         <button type="submit">Enviar</button>
-        <Link  to="/login/crearUsuario" className= {style.list}>
-        <button type="button">Crear usuario</button>
+        <Link to="/login/crearUsuario" className={style.list}>
+          <button type="button">Crear usuario</button>
         </Link>
       </form>
     </div>
   );
 };
 
-export default Form;
+export default Login;

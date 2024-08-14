@@ -4,9 +4,19 @@
   justify-content: space-between;
   padding: 0px 20px;
 }
+.eslogan {
+  display: flex;
+  margin-top: 3rem;
+}
+.infoContacto {
+  display: flex;
+  padding: 0.3rem;
+  font-size: small;
+}
 .containerRedes {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 @media (max-width: 768px) {
   .containerFooter {

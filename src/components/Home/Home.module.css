@@ -11,50 +11,22 @@
   display: flex;
   margin-top: 0px;
 }
-.tabla {
+.cuadro {
   display: flex;
-  justify-content: center;
-  margin: 100px 50px 0px 50px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* background-color: blueviolet; */
 }
-.tablaBody {
+.cuadritos {
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-
-.casillero {
+.cuadritoInfo {
   display: flex;
-  text-align: center;
-  padding: 5px;
-}
-@media (max-width: 768px) {
-  .container {
-    display: flex;
-    display: block;
-    text-align: center;
-    width: auto;
-    height: auto;
-  }
-  .img {
-    float: none;
-    width: 200px;
-    height: 150px;
-  }
-  .tabla {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-  }
-  .casillero {
-    font-size: x-small;
-    padding: 3px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .tabla {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-  }
+  flex-direction: column;
+  align-items: center;
 }

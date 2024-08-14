@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  position: relative;
+  height: 100px;
 }
 .logo {
   height: 100px;
@@ -40,59 +40,55 @@
 }
 .containerList {
   display: flex;
-  flex-direction: row; /* En dispositivos grandes, se muestran en línea */
-  list-style: none; /* Quitar los bullets */
-  margin: 0; /* Quitar márgenes por defecto */
-  padding: 0; /* Quitar padding por defecto */
+  flex-direction: row;
+  list-style: none;
   margin-top: 50px;
 }
-.list {
+.cart,
+.itemMenu {
   margin: 0 15px;
   color: #f4f5f7;
   text-decoration: none;
-  display: block;
 }
-.ContainerCart {
-  margin-top: 50px;
-  margin-right: 10px;
-  color: #f4f5f7;
+
+.activo {
+  color: #f8d63d;
 }
 
 @media (max-width: 768px) {
-  .containerNavbar {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    height: auto;
-  }
   .menuListContainer {
-    display: flex;
-    display: block;
+    order: 1;
+    margin-top: 30px;
+  }
+  .logo {
+    .logo {
+      height: 50px;
+      width: 50px;
+    }
+    order: 2;
+  }
+  .cart {
+    order: 3;
   }
   .menuButton {
-    margin-left: 60px;
     display: block;
+    padding-top: 50px;
   }
 
   .containerList {
     position: initial;
     top: 100%;
     right: 0;
-    background-color: #f4f5f7;
-    flex-direction: column; /* Mostrar en columna */
-    width: 100%;
+    flex-direction: column;
     max-height: 0;
     overflow: hidden;
+    transform: translate(1rem, -80%);
     transition: max-height 0.3s ease-out;
+    font-size: small;
   }
 
   .containerList.show {
-    max-height: 300px; /* Ajusta según el número de elementos del menú */
-  }
-
-  .list {
-    margin: 10px 0;
-    text-align: center;
-    color: #c8a502;
+    max-height: 6rem;
+    float: inline-start;
   }
 }

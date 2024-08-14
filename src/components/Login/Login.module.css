@@ -4,28 +4,18 @@
 }
 
 .formulario {
-  display: block;
   text-align: center;
-  width: 100%;
-  /* max-width: 50%; */
   margin: 125px auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #c8a502;
 }
-.formulario input {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px; /* Espacio entre los inputs */
-  padding: 10px;
-  box-sizing: border-box;
-}
 
-.button {
-  /* display: block; */
+button {
+  display: block;
   text-align: center;
-  width: 100%;
+  width: 10%;
   padding: 10px;
   margin: 3px auto;
   border: none;
@@ -36,6 +26,7 @@
   cursor: pointer;
 }
 
-.button:hover {
+button:hover {
   background-color: #c8a502;
+  color: white;
 }
