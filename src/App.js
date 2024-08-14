@@ -32,7 +32,7 @@ function App() {
               <Route path="/cart" element={<CartContainer />} />
               <Route path="/checkout" element={<FormCheckOutContainer />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/login/crearUsuario" element={<CrearUsuario />} />
+              <Route path="/crearUsuario" element={<CrearUsuario />} />
               <Route path="*" element={<h1>Ruta no encontrada</h1>} />
             </Routes>
           </div>
