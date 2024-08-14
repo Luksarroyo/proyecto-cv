@@ -46,7 +46,7 @@ const Login = () => {
         />
 
         <button type="submit">Enviar</button>
-        <Link to="/login/crearUsuario" className={style.list}>
+        <Link to="/crearUsuario" className={style.list}>
           <button type="button">Crear usuario</button>
         </Link>
       </form>

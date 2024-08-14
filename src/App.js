@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import HomeContainer from "./components/Home/HomeContainer";
 import CartContainer from "./components/Cart/CartContainer";
-import Usuario from "./components/Usuario/Usuario";
+import CrearUsuario from "./components/CrearUsuario/CrearUsuario";
 import DetalleProductoContainer from "./components/DetalleProducto/DetalleProductoContainer";
 // import NavbarContainer from "./components/Navbar/NavbarContainer";
 import CartContextProvider from "./Context/CartContext";
@@ -32,7 +32,15 @@ function App() {
               <Route path="/cart" element={<CartContainer />} />
               <Route path="/checkout" element={<FormCheckOutContainer />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/login/crearUsuario" element={<Usuario />} />
+              {/* esta ruta se cambio porque porque tiene mas sentido que la ruta sea /crearUsuario que la anterior /login/crearUsuario ya que si necesitamos hacer login no necesitamos crear un usuario y si necesitamos crear un usuario no vamos a hacer login en la app */}
+              <Route
+                path="/crearUsuario"
+                element={
+                  <div className={styles.paginaConFormulario}>
+                    <CrearUsuario />
+                  </div>
+                }
+              />
               <Route path="*" element={<h1>Ruta no encontrada</h1>} />
             </Routes>
           </div>

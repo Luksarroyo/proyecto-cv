@@ -2,7 +2,18 @@
   /* definis un ancho maximo para tu aplicación */
   max-width: 1300px;
   margin: 0 auto;
+  min-height: 100vh;
 }
 .routeContainer {
-  margin: 20px 70px;
+  padding: 20px 70px;
+
+  @media screen and (max-width: 768px) {
+    padding-inline: 5px;
+  }
+}
+
+/* esta clase se aplica a todas las paginas que tengan formularios, esto lo hacemos a traves del archivo que define las rutas -> App.js */
+.paginaConFormulario {
+  max-width: 650px;
+  margin: 5rem auto;
 }
