@@ -2,6 +2,7 @@ import React from "react";
 import style from "./CrearUsuario.module.css";
 import { useState } from "react";
 
+// cambiamos el nombre a crear usuario ya que tiene mas sentido utilizar el verbo "crear" que en vez de solo utilizar "Usuario"
 const CrearUsuario = () => {
   const [user, setUser] = useState({
     crearUsuario: "",

@@ -32,6 +32,7 @@ function App() {
               <Route path="/cart" element={<CartContainer />} />
               <Route path="/checkout" element={<FormCheckOutContainer />} />
               <Route path="/login" element={<Login />} />
+              {/* esta ruta se cambio porque porque tiene mas sentido que la ruta sea /crearUsuario que la anterior /login/crearUsuario ya que si necesitamos hacer login no necesitamos crear un usuario y si necesitamos crear un usuario no vamos a hacer login en la app */}
               <Route path="/crearUsuario" element={<CrearUsuario />} />
               <Route path="*" element={<h1>Ruta no encontrada</h1>} />
             </Routes>
