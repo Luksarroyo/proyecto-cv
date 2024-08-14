@@ -1,20 +1,35 @@
 .grilla {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 5px;
+  gap: 1.5rem;
   margin: 20px 70px; /* Centra el contenedor */
 }
 .cardContainer {
   background-color: #c8a502;
-  height: 350px;
+  /* este alto esta rompiendo el layout de la imagen porque el alto esta controlado por la clase .contenedorImg */
+  /* height: 350px; */
+  /* si podemos definir un alto minimo para que la grilla quede alineada */
+  min-height: 410px;
   color: #f4f5f7;
   border: 5px solid black;
   text-align: center;
 }
-.cardImg {
-  width: 150px;
-  height: 200px;
+
+.contenedorImg {
+  /* centramos la imagen dentro de este div */
+  display: flex;
+  justify-content: center;
+  /* definiendo solo el alto la img se ajusta a todo el ancho disponible */
+  height: 250px;
+  /* puse el fondo blanco para que no se vea que la images es mas chica que el contenedor */
+  background-color: white;
 }
+
+.contenedorInfo {
+  padding: 1rem;
+}
+
+/* fijate que en todos los archivos css definis una clase para los botones, esto deberia hacerse en un solo lugar asi los botones son iguales para toda la app */
 .button {
   width: 50%;
   border-radius: 10px;
