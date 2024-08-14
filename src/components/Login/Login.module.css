@@ -12,7 +12,8 @@
   background-color: #c8a502;
 }
 
-button {
+/* esta clase se estaba aplicando tambien a la pagina /crearUsuario, puede ser un error en el selector de css */
+.formulario button {
   display: block;
   text-align: center;
   width: 10%;
@@ -26,7 +27,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.formulario button:hover {
   background-color: #c8a502;
   color: white;
 }

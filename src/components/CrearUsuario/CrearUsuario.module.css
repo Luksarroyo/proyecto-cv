@@ -1,41 +1,48 @@
 .titulo {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .formulario {
-  display: block;
-  text-align: center;
-  width: 100%;
-  /* max-width: 50%; */
-  margin: 125px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #c8a502;
-}
-.formulario input {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px; /* Espacio entre los inputs */
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.button {
+  /* no utilizamos la propiedad display block */
   /* display: block; */
   text-align: center;
-  width: 100%;
-  padding: 10px;
-  margin: 3px auto;
+  /* no usamos la prop width si no la necesitamos */
+  /* width: 100%; */
+  /* max-width: 50%; */
+  /* este es el margin que hacia que el footer se vea muy separado del formulario */
+  /* margin: 125px auto; */
+  padding: 40px;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  background-color: #c8a502;
+  /* utilizamos flex para manejar todos los elementos dentro del formulario */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formulario input {
+  /* no utilizamos la propiedad display block, en lugar de eso podemos utilizar la propiedad display flex en el form y no en el input, ver arriba */
+  /* display: block; */
+  /* width: 100%; */
+  /* Espacio entre los inputs */
+  /* margin-bottom: 10px;  */
+  padding: 5px 10px;
+  /* la prop box-sizing no es necesaria aca ya que la pusimos en el index.css para todos los elementos de nuestra app */
+  /* box-sizing: border-box; */
+  border-radius: 8px;
+  border: 0;
+}
+
+/* esta podria ser una clase generica para todos los botones de tu app  */
+.formulario button {
+  padding: 5px 20px;
+  margin-inline: auto;
   border: none;
-  border-radius: 4px;
-  background-color: #f4f5f7;
-  color: rgb(10, 9, 9);
-  font-size: 10px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.button:hover {
+.formulario button:hover {
   background-color: #c8a502;
 }

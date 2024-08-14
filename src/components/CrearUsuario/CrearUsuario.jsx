@@ -19,7 +19,7 @@ const CrearUsuario = () => {
     console.log(user);
   };
   return (
-    <div>
+    <>
       <h1 className={style.titulo}>Crear usuario</h1>
       <form className={style.formulario} onSubmit={envioFormulario}>
         <input
@@ -45,9 +45,9 @@ const CrearUsuario = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Crear</button>
+        <button type="submit">Crear usuario</button>
       </form>
-    </div>
+    </>
   );
 };
 
