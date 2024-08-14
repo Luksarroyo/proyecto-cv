@@ -2,24 +2,76 @@
   background-color: #c8a502;
   display: flex;
   justify-content: space-between;
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .eslogan {
   display: flex;
-  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* margin-top: 3rem; */
+  text-wrap: balance;
 }
+
+/* clase que envuelve cada uno de los 3 div del footer */
+.footerSection {
+  text-align: center;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
+}
+.footerSection h4 {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+}
+
+/* clase que envuelve cada uno de los div de la seccion de contacto */
 .infoContacto {
   display: flex;
-  padding: 0.3rem;
-  font-size: small;
+  /* padding: 0.3rem; */
+  /* small? */
+  /* font-size: small; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
 }
+
+/* como estas reglas CSS se comparten podemos agregar los identificadores separados por coma, en el momento que te haga falta podes separarlas para poder diferenciar las clases para cada seccion */
+.infoContacto a,
+.containerRedes a {
+  color: #222;
+  text-decoration: none;
+}
+
+.infoContacto a:hover,
+.containerRedes a:hover {
+  text-decoration: underline;
+}
+
 .containerRedes {
   display: flex;
+  gap: 1.5rem;
   justify-content: space-between;
-  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
-@media (max-width: 768px) {
+.containerRedes svg {
+  font-size: 2rem;
+}
+
+.footerSection {
+}
+
+/* @media (max-width: 768px) {
   .containerFooter {
     font-size: small;
   }
-}
+} */
