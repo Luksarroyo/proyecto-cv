@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./Usuario.module.css";
+import style from "./CrearUsuario.module.css";
 import { useState } from "react";
 
-const Usuario = () => {
+const CrearUsuario = () => {
   const [user, setUser] = useState({
     crearUsuario: "",
     contraseña: "",
@@ -50,4 +50,4 @@ const Usuario = () => {
   );
 };
 
-export default Usuario;
+export default CrearUsuario;
