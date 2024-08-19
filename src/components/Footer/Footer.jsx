@@ -13,44 +13,43 @@ const Footer = () => {
     <>
       <Outlet />
       <div className={style.containerFooter}>
-        <div>
-          <div>
-            <h3>Contacto</h3>
+        <div className={style.footerSection}>
+          <h4>Contacto</h4>
+          <div className={style.infoContacto}>
+            <FaPhoneSquareAlt /> <p>351-1111222333</p>
           </div>
           <div className={style.infoContacto}>
-            <FaPhoneSquareAlt /> 351-1111222333
+            <MdEmail />
+            <a href="mailto:doctacoffe@gmail.com">doctacoffe@gmail.com</a>
           </div>
           <div className={style.infoContacto}>
-            <MdEmail /> Doctacoffe@gmail.com
-          </div>
-          <div className={style.infoContacto}>
-            <FaLocationDot /> Cordoba, Argentina
+            <FaLocationDot />
+            <p>Cordoba, Argentina</p>
           </div>
         </div>
-        <h2 className={style.eslogan}>
-          <GiCoffeeBeans />
-          En una ciudad disfrutas todo el mundo
-          <GiCoffeeBeans />
-        </h2>
-        <div>
-          <div>
-            <h3>Redes Sociales</h3>
-          </div>
+        <div className={style.footerSection}>
+          <h4 className={style.eslogan}>
+            <GiCoffeeBeans />
+            En una ciudad disfrutas todo el mundo
+            <GiCoffeeBeans />
+          </h4>
+        </div>
+        <div className={style.footerSection}>
+          <h4>Redes Sociales</h4>
           <div className={style.containerRedes}>
-            <div>
+            <a href="https://www.instagram.com/doctacoffe/">
               <AiFillInstagram />
-            </div>
-            <div>
+            </a>
+            <a href="https://www.facebook.com/doctacoffe/">
               <FaFacebookSquare />
-            </div>
-            <div>
+            </a>
+            <a href="https://www.tiktok.com/@doctacoffe/">
               <FaTiktok />
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </>
   );
 };
-
 export default Footer;

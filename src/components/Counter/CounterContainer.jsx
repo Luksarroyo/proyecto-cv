@@ -1,33 +1,29 @@
-import React, { useState } from 'react'
-import Counter from './Counter';
+import React, { useState } from "react";
+import Counter from "./Counter";
 // 5to recibo la funcion on add de detalleProducto
-const CounterContainer = ({stock, onAdd}) => {
+const CounterContainer = ({ stock, onAdd }) => {
+  const [counter, setCounter] = useState(1);
 
-const [counter, setCounter] = useState (1);
-
-const sumar = () => {
-    if (counter < stock){
-        setCounter (counter +1);
-    }else{
-        alert ("stock insuficiente")
+  const sumar = () => {
+    if (counter < stock) {
+      setCounter(counter + 1);
+    } else {
+      alert("stock insuficiente");
     }
-    
-};
+  };
 
-const restar = () => {
+  const restar = () => {
     if (counter > 1) {
-        setCounter (counter -1);
-    }else{
-        alert ("Error")
+      setCounter(counter - 1);
+    } else {
+      alert("Error");
     }
-    
-};
+  };
   return (
     <div>
-{/* 6tol:e  paso´la funcion onadd  al presentacional  */}
-    <Counter counter ={counter} sumar ={sumar} restar ={restar} onAdd={onAdd}/>
+      <Counter counter={counter} sumar={sumar} restar={restar} onAdd={onAdd} />
     </div>
-  )
-}
+  );
+};
 
-export default CounterContainer
+export default CounterContainer;

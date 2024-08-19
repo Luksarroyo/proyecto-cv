@@ -4,7 +4,7 @@
 }
 .img {
   float: left;
-  width: 500px;
+  width: 50%;
   height: 300px;
 }
 .parrafo {
@@ -17,7 +17,6 @@
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  /* background-color: blueviolet; */
 }
 .cuadritos {
   display: flex;
@@ -29,4 +28,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+  .parrafo {
+    display: block;
+  }
+  .cuadro {
+    font-size: small;
+  }
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./Usuario.module.css";
+import style from "./CrearUsuario.module.css";
 import { useState } from "react";
 
-const Usuario = () => {
+const CrearUsuario = () => {
   const [user, setUser] = useState({
     crearUsuario: "",
     contraseña: "",
@@ -18,7 +18,7 @@ const Usuario = () => {
     console.log(user);
   };
   return (
-    <div>
+    <>
       <h1 className={style.titulo}>Crear usuario</h1>
       <form className={style.formulario} onSubmit={envioFormulario}>
         <input
@@ -44,10 +44,10 @@ const Usuario = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Crear</button>
+        <button type="submit">Crear Usuario</button>
       </form>
-    </div>
+    </>
   );
 };
 
-export default Usuario;
+export default CrearUsuario;
