@@ -2,19 +2,27 @@
   display: flex;
 }
 .cardContainer {
-  margin: 50px;
-  padding: 20px;
-  height: 300px;
   background-color: #c8a502;
-  display: flex;
+  min-height: 410px;
+  color: #f4f5f7;
+  border: 5px solid black;
+  text-align: center;
+  width: 30%;
 }
-.imagen {
-  width: 200px;
+.contenedorImg {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  background-color: white;
 }
 .info {
   text-align: center;
-}
 
+  padding: 1rem;
+}
+.buttonCounter {
+  margin-top: 10%;
+}
 @media (max-width: 768px) {
   .container {
     display: flex;
@@ -23,6 +31,7 @@
   .cardContainer {
     margin: 50px;
     padding: 20px;
+    width: 80%;
     height: auto;
     background-color: #c8a502;
     display: flex;

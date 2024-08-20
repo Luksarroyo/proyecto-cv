@@ -6,14 +6,16 @@ const DetalleProducto = ({ producto, onAdd }) => {
   return (
     <div className={style.container}>
       <div className={style.cardContainer}>
-        <img className={style.imagen} src={producto.img} alt="" />
+        <div className={style.contenedorImg}>
+          <img src={producto.img} alt="" />
+        </div>
         <div className={style.info}>
           <h1>{producto.titulo}</h1>
-          <h2>{producto.descripcion}</h2>
+          <p>{producto.descripcion}</p>
           <h3>${producto.precio}</h3>
 
           {producto.stock > 0 ? (
-            <div>
+            <div className={style.buttonCounter}>
               <CounterContainer stock={producto.stock} onAdd={onAdd} />
             </div>
           ) : (

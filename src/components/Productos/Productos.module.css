@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin: 20px 70px; /* Centra el contenedor */
+  margin: 20px 70px;
 }
 .cardContainer {
   background-color: #c8a502;

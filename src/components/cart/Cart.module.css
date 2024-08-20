@@ -23,11 +23,13 @@
   justify-content: flex-end;
   margin-right: 60px;
 }
-.buttom {
-  display: flex;
-  justify-content: center;
-  width: 150px;
-  height: 30px;
+.button {
+  width: 30%;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: black;
+  color: #f4f5f7;
+  text-decoration: none;
 }
 .totalCompra {
   display: flex;

@@ -1,11 +1,16 @@
 import React from "react";
 import style from "./Cart.module.css";
 
-
-const Cart = ({ cart, clearCartAlert, deleteProductoById, total , navigate}) => {
+const Cart = ({
+  cart,
+  clearCartAlert,
+  deleteProductoById,
+  total,
+  navigate,
+}) => {
   return (
-    <div >
-      <h1 className= {style.titulo}>Lista de Compras</h1>
+    <div>
+      <h1 className={style.titulo}>Lista de Compras</h1>
       {cart.map((e) => (
         <div className={style.container} key={e.id}>
           <div className={style.descripcion}>
@@ -14,11 +19,14 @@ const Cart = ({ cart, clearCartAlert, deleteProductoById, total , navigate}) => 
               <h1>{e?.titulo}</h1>
               <span>{e.descripcion}</span>
             </div>
-            <h3 className= {style.precio}>Precio:${e?.precio}</h3>
+            <p className={style.precio}>Precio:${e?.precio}</p>
           </div>
-          <h3 className= {style.cantidad}>Cantidad de productos {e.quantity}</h3>
-          <button className={style.buttom} onClick={() => deleteProductoById(e.id)}>
-            Eliminar producto
+          <p className={style.cantidad}>Cantidad de productos {e.quantity}</p>
+          <button
+            className={style.button}
+            onClick={() => deleteProductoById(e.id)}
+          >
+            Eliminar Producto
           </button>
         </div>
       ))}
@@ -26,14 +34,19 @@ const Cart = ({ cart, clearCartAlert, deleteProductoById, total , navigate}) => 
       {/* tecnica de rendering condicionado con && */}
       {cart.length > 0 && (
         <div>
-          <button className={style.buttom} onClick={()=> navigate("/checkout")} >Terminar Compra</button>
-          <button className={style.buttom} onClick={clearCartAlert}>Limpiar carrito</button>
-          
-        </div> 
-      )}   
+          <button
+            className={style.button}
+            onClick={() => navigate("/checkout")}
+          >
+            Terminar Compra
+          </button>
+          <button className={style.button} onClick={clearCartAlert}>
+            Limpiar el Carrito
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Cart;
-
