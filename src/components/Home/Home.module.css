@@ -5,7 +5,7 @@
 .img {
   float: left;
   width: 50%;
-  height: 300px;
+  height: 400px;
 }
 .parrafo {
   display: flex;
@@ -32,6 +32,9 @@
 @media (max-width: 768px) {
   .container {
     display: block;
+  }
+  .img {
+    height: 200px;
   }
   .parrafo {
     display: block;

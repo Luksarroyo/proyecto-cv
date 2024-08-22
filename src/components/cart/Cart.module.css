@@ -5,11 +5,15 @@
   border-style: inset;
   border-color: #c8a502;
 }
-.descripcion {
+.cardContainer {
   display: flex;
   justify-content: space-between;
   margin: 50px 50px 0 50px;
 }
+.descripcion {
+  margin: 20px;
+}
+
 .precio {
   display: flex;
   align-items: flex-end;
@@ -21,7 +25,7 @@
 .cantidad {
   display: flex;
   justify-content: flex-end;
-  margin-right: 60px;
+  margin-right: 30px;
 }
 .button {
   width: 30%;
@@ -40,6 +44,18 @@
   display: flex;
   justify-content: center;
 }
+.carritoVacioContainer {
+  margin: 10px;
+  padding-bottom: 10px;
+  border: 10px;
+  border-style: inset;
+  border-color: #c8a502;
+  display: flex;
+  margin: 50px 50px 0 50px;
+  gap: 120px;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .container {
     display: flex;
@@ -49,5 +65,9 @@
     display: flex;
     display: block;
     margin: 0;
+  }
+  .carritoVacioContainer {
+    gap: 30px;
+    align-items: center;
   }
 }
