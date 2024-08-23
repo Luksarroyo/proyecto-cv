@@ -62,7 +62,6 @@ const CartContainer = () => {
         clearCartAlert={clearCartAlert}
         clearProductAlert={clearProductAlert}
       />
-      ;
     </div>
   );
 };

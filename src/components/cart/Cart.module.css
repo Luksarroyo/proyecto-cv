@@ -1,4 +1,9 @@
+.titulo {
+  text-align: center;
+}
 .container {
+  display: block;
+  text-align: center;
   margin: 10px;
   padding-bottom: 10px;
   border: 10px;
@@ -6,68 +11,37 @@
   border-color: #c8a502;
 }
 .cardContainer {
-  display: flex;
-  justify-content: space-between;
-  margin: 50px 50px 0 50px;
+  margin: 10px;
 }
-.descripcion {
-  margin: 20px;
-}
-
-.precio {
-  display: flex;
-  align-items: flex-end;
-}
-.img {
-  width: 100px;
-  height: 150px;
-}
-.cantidad {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 30px;
+.imgContainer {
+  margin: auto;
+  display: block;
+  width: 40%;
+  height: 15rem;
 }
 .button {
-  width: 30%;
-  margin: 5px;
   border-radius: 10px;
   background-color: black;
   color: #f4f5f7;
   text-decoration: none;
+  margin: 10px;
 }
 .totalCompra {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 50px;
-}
-.titulo {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 .carritoVacioContainer {
-  margin: 10px;
-  padding-bottom: 10px;
-  border: 10px;
-  border-style: inset;
-  border-color: #c8a502;
   display: flex;
-  margin: 50px 50px 0 50px;
-  gap: 120px;
-  align-items: center;
+  justify-content: space-around;
+}
+.carritoVacioContainer h3 {
+  margin-top: 50px;
 }
 
 @media (max-width: 768px) {
-  .container {
-    display: flex;
+  .imgContainer {
+    margin: auto;
     display: block;
-  }
-  .descripcion {
-    display: flex;
-    display: block;
-    margin: 0;
-  }
-  .carritoVacioContainer {
-    gap: 30px;
-    align-items: center;
+    width: 7rem;
+    height: 9rem;
   }
 }
