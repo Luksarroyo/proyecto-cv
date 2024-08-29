@@ -8,30 +8,9 @@ import { CartContext } from "../../Context/CartContext";
 import { db } from "../../firebaseConfig";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
-import { styled } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
 
 const FormCheckOutContainer = () => {
   // logica para textfild
-
-  // Crear un TextField personalizado usando `styled`
-  const CustomTextField = styled(TextField)({
-    "& .MuiFilledInput-root": {
-      backgroundColor: "#c8a502",
-      "&:hover": {
-        backgroundColor: "#eed04a",
-      },
-      "&.Mui-focused": {
-        backgroundColor: "white",
-      },
-    },
-    "& .MuiInputLabel-root": {
-      color: "black",
-    },
-    "& .MuiFormHelperText-root": {
-      color: "#c8a502",
-    },
-  });
   const currencies = [
     {
       value: "Argentina",
@@ -83,7 +62,7 @@ const FormCheckOutContainer = () => {
     );
     clearCart();
   };
-  const { handleChange, handleSubmit, errors, values } = useFormik({
+  const { handleChange, handleSubmit, errors } = useFormik({
     initialValues: {
       nombre: "",
       email: "",
@@ -131,8 +110,7 @@ const FormCheckOutContainer = () => {
           handleSubmit={handleSubmit}
           errors={errors}
           currencies={currencies}
-          CustomTextField={CustomTextField}
-          values={values}
+          // CustomTextField={CustomTextField}
         />
       )}
     </div>

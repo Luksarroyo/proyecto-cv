@@ -1,28 +1,20 @@
 import React from "react";
 import { Grid, Button } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
 
-const FormCheckOut = ({
-  handleChange,
-  handleSubmit,
-  errors,
-  currencies,
-  CustomTextField,
-  values,
-}) => {
+const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
   return (
     <div>
       <form action="" onSubmit={handleSubmit}>
         <h3>Informacion del cliente</h3>
         <Grid container spacing={2} flex justifyContent={"center"}>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Nombre"
-              values={values.nombre}
               variant="filled"
               name="nombre"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.nombre ? true : false}
@@ -30,13 +22,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Email"
-              values={values.email}
               variant="filled"
               name="email"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.email ? true : false}
@@ -44,13 +34,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Telefono"
-              values={values.telefono}
               variant="filled"
               name="telefono"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.telefono ? true : false}
@@ -61,13 +49,11 @@ const FormCheckOut = ({
         <h3>Direccion del cliente</h3>
         <Grid container rowSpacing={2} flex justifyContent={"center"}>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Direccion de la calle"
-              values={values.direccion}
               variant="filled"
               name="direccion"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.direccion ? true : false}
@@ -75,13 +61,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Numero de la calle"
-              values={values.numeracion}
               variant="filled"
               name="numeracion"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.numeracion ? true : false}
@@ -89,13 +73,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Ciudad"
               variant="filled"
-              values={values.ciudad}
               name="ciudad"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.ciudad ? true : false}
@@ -103,13 +85,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Codigo postal"
-              values={values.codigoPostal}
               variant="filled"
               name="codigoPostal"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.codigoPostal ? true : false}
@@ -117,13 +97,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Provincia"
-              values={values.provincia}
               variant="filled"
               name="provincia"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.provincia ? true : false}
@@ -131,15 +109,12 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               select
               label="Select"
-              values={values.pais}
               variant="filled"
               name="pais"
-              color="warning"
-              value={values.pais}
               fullWidth
               onChange={handleChange}
               error={errors.pais ? true : false}
@@ -150,19 +125,17 @@ const FormCheckOut = ({
                   {option.label}
                 </MenuItem>
               ))}
-            </CustomTextField>
+            </TextField>
           </Grid>
         </Grid>
         <h3>Informacion de pago</h3>
         <Grid container rowSpacing={2} flex justifyContent={"center"}>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Nombre titular"
-              values={values.titular}
               variant="filled"
               name="nombreTitular"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.nombreTitular ? true : false}
@@ -170,13 +143,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Numero tarjeta de credito"
-              values={values.numeroTarjeta}
               variant="filled"
               name="numeroTarjeta"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.numeroTarjeta ? true : false}
@@ -184,13 +155,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
-              label="Numero de expiracion"
-              values={values.numeroExpiracion}
+              label="Numero de expiracion AA-MM"
               variant="filled"
               name="numeroExpiracion"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.numeroExpiracion ? true : false}
@@ -198,13 +167,11 @@ const FormCheckOut = ({
             />
           </Grid>
           <Grid item xs={12} md={7}>
-            <CustomTextField
+            <TextField
               id="filled-basic"
               label="Codigo de seguridad"
-              values={values.codigoSeguridad}
               variant="filled"
               name="codigoSeguridad"
-              color="warning"
               fullWidth
               onChange={handleChange}
               error={errors.codigoSeguridad ? true : false}
