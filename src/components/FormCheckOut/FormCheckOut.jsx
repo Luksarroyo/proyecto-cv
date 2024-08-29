@@ -9,7 +9,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
       <form action="" onSubmit={handleSubmit}>
         <h3>Informacion del cliente</h3>
         <Grid container spacing={2} flex justifyContent={"center"}>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Nombre"
@@ -21,7 +21,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.nombre}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Email"
@@ -33,7 +33,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.email}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Telefono"
@@ -48,7 +48,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
         </Grid>
         <h3>Direccion del cliente</h3>
         <Grid container rowSpacing={2} flex justifyContent={"center"}>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Direccion de la calle"
@@ -60,7 +60,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.direccion}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Numero de la calle"
@@ -72,7 +72,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.numeracion}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Ciudad"
@@ -84,7 +84,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.ciudad}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Codigo postal"
@@ -96,7 +96,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.codigoPostal}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Provincia"
@@ -108,7 +108,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.provincia}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               select
@@ -130,7 +130,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
         </Grid>
         <h3>Informacion de pago</h3>
         <Grid container rowSpacing={2} flex justifyContent={"center"}>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Nombre titular"
@@ -142,7 +142,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.nombreTitular}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Numero tarjeta de credito"
@@ -154,7 +154,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.numeroTarjeta}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Numero de expiracion AA-MM"
@@ -166,7 +166,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               helperText={errors.numeroExpiracion}
             />
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid item xs={9} md={7}>
             <TextField
               id="filled-basic"
               label="Codigo de seguridad"
@@ -177,7 +177,7 @@ const FormCheckOut = ({ handleChange, handleSubmit, errors, currencies }) => {
               error={errors.codigoSeguridad ? true : false}
               helperText={errors.codigoSeguridad}
             />
-            <Grid item xs={12} md={7}>
+            <Grid item xs={9} md={7}>
               <Button
                 type="submit"
                 variant="outlined"
