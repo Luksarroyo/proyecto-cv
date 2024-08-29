@@ -8,8 +8,50 @@ import { CartContext } from "../../Context/CartContext";
 import { db } from "../../firebaseConfig";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
+import { styled } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
 
 const FormCheckOutContainer = () => {
+  // logica para textfild
+
+  // Crear un TextField personalizado usando `styled`
+  const CustomTextField = styled(TextField)({
+    "& .MuiFilledInput-root": {
+      backgroundColor: "#c8a502",
+      "&:hover": {
+        backgroundColor: "#eed04a",
+      },
+      "&.Mui-focused": {
+        backgroundColor: "white",
+      },
+    },
+    "& .MuiInputLabel-root": {
+      color: "black",
+    },
+    "& .MuiFormHelperText-root": {
+      color: "#c8a502",
+    },
+  });
+  const currencies = [
+    {
+      value: "Argentina",
+      label: "Argentina",
+    },
+    {
+      value: "Brazil",
+      label: "Brazil",
+    },
+    {
+      value: "Chile",
+      label: "Chile",
+    },
+    {
+      value: "Paraguay",
+      label: "Paraguay",
+    },
+  ];
+
+  // logica propia de la pagina
   const { cart, totalPrecio, clearCart } = useContext(CartContext);
   const [orderId, setOrderId] = useState(null);
 
@@ -41,11 +83,21 @@ const FormCheckOutContainer = () => {
     );
     clearCart();
   };
-  const { handleChange, handleSubmit, errors } = useFormik({
+  const { handleChange, handleSubmit, errors, values } = useFormik({
     initialValues: {
       nombre: "",
       email: "",
       telefono: "",
+      direccion: "",
+      numeracion: "",
+      ciudad: "",
+      codigoPostal: "",
+      provincia: "",
+      pais: "",
+      nombreTitular: "",
+      numeroTarjeta: "",
+      numeroExpiracion: "",
+      codigoSeguridad: "",
     },
 
     onSubmit: checkoutFn,
@@ -56,6 +108,16 @@ const FormCheckOutContainer = () => {
         .required("Este campo es Obligatorio")
         .email("Debe ingresar un email valido"),
       telefono: Yup.number().required("Este campo es Obligatorio"),
+      direccion: Yup.string().required("Este campo es Obligatorio"),
+      numeracion: Yup.number().required("Este campo es Obligatorio"),
+      ciudad: Yup.string().required("Este campo es Obligatorio"),
+      codigoPostal: Yup.number().required("Este campo es Obligatorio"),
+      provincia: Yup.string().required("Este campo es Obligatorio"),
+      pais: Yup.string().required("Este campo es Obligatorio"),
+      nombreTitular: Yup.string().required("Este campo es Obligatorio"),
+      numeroTarjeta: Yup.number().required("Este campo es Obligatorio"),
+      numeroExpiracion: Yup.number().required("Este campo es Obligatorio"),
+      codigoSeguridad: Yup.number().required("Este campo es Obligatorio"),
     }),
     validateOnChange: false,
     // de esta forma evito que se valide cada vez que escribo y me tire error todo el tiempo
@@ -68,6 +130,9 @@ const FormCheckOutContainer = () => {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           errors={errors}
+          currencies={currencies}
+          CustomTextField={CustomTextField}
+          values={values}
         />
       )}
     </div>

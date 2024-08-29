@@ -1,6 +1,11 @@
-
-.counter{
-    position: absolute;
-    top: 57px;
-    right: 25px;   
+.counter {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: small;
 }

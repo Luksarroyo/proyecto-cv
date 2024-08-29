@@ -50,6 +50,9 @@
   color: #f4f5f7;
   text-decoration: none;
 }
+.cart {
+  position: relative;
+}
 
 .activo {
   color: #f8d63d;
@@ -69,7 +72,6 @@
   }
   .cart {
     order: 3;
-    width: 10%;
   }
   .menuButton {
     display: block;
